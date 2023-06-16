@@ -1,10 +1,12 @@
 from dotenv import load_dotenv
+import time
 
 load_dotenv()
 
+time.sleep(5)  # waiting for database-container initializing
+
 from src import start_app, logger_init
 from app.database import database_init
-from app.models import File
 
 
 def main():

@@ -1,6 +1,7 @@
-from .database import Base
 from sqlalchemy import Column, Integer, String, LargeBinary, PrimaryKeyConstraint, ForeignKey
 from sqlalchemy.orm import Session
+
+from .database import Base
 
 
 class Field(Base):

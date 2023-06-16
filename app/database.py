@@ -1,12 +1,13 @@
+import os
+
+from loguru import logger
+from psycopg2 import connect
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+
 import src.settings
 import src.sql_queries
-from psycopg2 import connect
-import os
-from loguru import logger
-
 
 SQLALCHEMY_DATABASE_URL = src.settings.DATABASE_URL
 
@@ -26,6 +27,9 @@ conn.autocommit = True
 
 
 def database_init() -> None:
+    """
+    Alembic создает таблицы для сущностей, если их нет (при первом запуске БД)
+    """
     with conn.cursor() as cursor:
         cursor.execute(src.sql_queries.GET_ALL_TABLES)
         tables = cursor.fetchall()

@@ -1,9 +1,10 @@
 from pydantic import Field, BaseModel
+from typing import Optional
 
 
 class FileBase(BaseModel):
 	name: str = Field(max_length=50)
-	size: int = Field(ge=1)
+	size: Optional[int] = Field(ge=1, default=None)
 
 
 class FileCreate(FileBase):

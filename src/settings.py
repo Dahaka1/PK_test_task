@@ -6,7 +6,7 @@ DATABASE_PARAMS = {"user": os.environ.get("DB_USER"), "password": os.environ.get
 
 DATABASE_URL = "postgresql://%s:%s@%s:%s/%s" % tuple(DATABASE_PARAMS.values())
 
-STARTING_COMMAND = "uvicorn app.main:app"
+STARTING_COMMAND = "uvicorn app.main:app --host 0.0.0.0 --port 8000"
 
 STANDARD_DB_TABLES_AMOUNT = 3  # with alembic versions table
 
