@@ -21,6 +21,7 @@ handling information about them. Works using all std http-methods.
 # Notice!!!
 - GET-method for files for getting specify file info by its ID *don't work with additional sorting and filtering params in standard Swagger docs page*, because GET-method usually don't provide sending query body-params;
 - You can use that params using another app like Postman like it shows on the screenshot below:
+
 ![alt text](https://github.com/Dahaka1/pk_test_task/blob/main/app/blob/get_file_query_params.png?raw=true)
 
 - I didn't path operation function receiving params with query Path (url-string), because its uncomfortably to add many params for url.
@@ -34,8 +35,9 @@ handling information about them. Works using all std http-methods.
 - Все методы включают русскоязычное описание использования. Вы можете проверить, как они работают, используя стандартные формы Swagger или расширенные приложения, такие как Postman;
 
 # Обратите внимание!!!
-- GET-метод для файлов для получения информации о файле по его идентификатору * не работает с дополнительными параметрами сортировки и фильтрации на стандартной странице документов Swagger*, поскольку GET-метод обычно не предоставляет параметры тела запроса для отправки;
+- GET-метод для файлов для получения информации о файле по его идентификатору * не работает с дополнительными параметрами сортировки и фильтрации на стандартной странице документов Swagger*, поскольку GET-метод обычно не предоставляет возможность отправлять параметры в теле запроса;
 - Вы можете использовать эти параметры с помощью другого приложения, такого как Postman, как показано на скриншоте ниже:
+
 ![альтернативный текст](https://github.com/Dahaka1/pk_test_task/blob/main/app/blob/get_file_query_params.png?raw=true)
 
-- Я не использовал функцию path operation, получающую параметры с помощью пути запроса (url-строка), потому что неудобно добавлять много параметров для url.
+- Я не использовал получение параметров с помощью пути запроса (в url-строке), потому что неудобно добавлять много параметров в url.
