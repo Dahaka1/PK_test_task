@@ -12,7 +12,7 @@ client = TestClient(app)
 
 
 def test_create_file():
-	testing_file = {"file": open("tests/blob/hungary-forecast.csv", 'rb')}
+	testing_file = {"file": open("tests/static/hungary-forecast.csv", 'rb')}
 	response = client.post(
 		"/files/",
 		files=testing_file
@@ -51,7 +51,7 @@ def test_create_empty_file():
 
 
 def test_create_non_supported_format_file():
-	testing_file = {"file": open("tests/blob/test.png", 'rb')}
+	testing_file = {"file": open("tests/static/test.png", 'rb')}
 	response = client.post(
 		"/files/",
 		files=testing_file

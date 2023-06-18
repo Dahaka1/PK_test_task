@@ -10,7 +10,7 @@ client = TestClient(app)
 
 
 def test_get_file():
-	testing_file = {"file": open("tests/blob/hungary-forecast.csv", 'rb')}
+	testing_file = {"file": open("tests/static/hungary-forecast.csv", 'rb')}
 	file_id = client.post(
 		"/files/",
 		files=testing_file
@@ -22,7 +22,7 @@ def test_get_file():
 		f"/files/{file_id}"
 	)
 
-	retrieve_content = load(open("tests/strings/test_get_file.json", encoding='utf-8'))
+	retrieve_content = load(open("tests/static/test_get_file.json", encoding='utf-8'))
 
 	assert retrieve.status_code == 200
 	js = retrieve.json()
